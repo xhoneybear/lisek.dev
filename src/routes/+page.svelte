@@ -1,3 +1,5 @@
+<title>Camille - the foxy dev!</title>
+
 <style lang="postcss">
     .logo {
         height: 50vh;

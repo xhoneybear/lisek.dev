@@ -1,3 +1,5 @@
+<title>About me!</title>
+
 <script lang="ts">
     let size_x = 960;
     let size_y = size_x * Math.sqrt(3);
