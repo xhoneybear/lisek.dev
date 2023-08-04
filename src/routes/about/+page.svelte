@@ -1,11 +1,13 @@
-<title>About me!</title>
+<svelte:head>
+    <title>About me!</title>
+</svelte:head>
 
 <script lang="ts">
     let size_x = 960;
     let size_y = size_x * Math.sqrt(3);
 </script>
 
-<style>
+<style lang="postcss">
     #paper-wrap {
         filter: drop-shadow(6px 14px 10px rgb(0 0 0 / 0.1));
         transform: rotate(-2deg);
@@ -15,26 +17,26 @@
         @apply rounded;
         @apply bg-stone-50;
         background-image: linear-gradient(to left, red 2px, transparent 1px), linear-gradient(to top, #ccd 1px, transparent 1px);
-        background-size: 90% 2.25rem;
+        background-size: 860px 2.25rem;
         clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 200px, 760px 0);
-        padding: 5rem 5vw;
+        padding: 5rem 120px;
         font-family: Caveat, cursive;
-    }
-    .paper:before {
-        @apply bg-stone-100;
-        @apply rounded;
-        @apply shadow-xl;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 200px;
-        content: '';
-        background-image: linear-gradient(red 2px, transparent 1px), linear-gradient(to left, #ccd 1px, transparent 1px);
-        background-size: 2.25rem 50%;
-    }
-    .paper > p, h2, h3 {
-        @apply pb-9;
+        &:before {
+            @apply bg-stone-100;
+            @apply rounded;
+            @apply shadow-xl;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            content: '';
+            background-image: linear-gradient(red 2px, transparent 1px), linear-gradient(to left, #ccd 1px, transparent 1px);
+            background-size: 2.25rem 100px;
+        }
+        & > p, h2, h3 {
+            @apply pb-9;
+        }
     }
     /* TODO: add animated link underline */
 </style>

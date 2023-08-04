@@ -1,15 +1,13 @@
-<script>
+<script lang="ts">
     import '../app.css';
 </script>
 
 <style lang="postcss">
-    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
     :global(html) {
         min-height: 100vh;
         background-image: url(/bg.png);
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;
         background-attachment: fixed;
     }
     :global(body) {

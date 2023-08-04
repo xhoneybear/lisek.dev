@@ -1,4 +1,6 @@
-<title>Fox confused?</title>
+<svelte:head>
+    <title>Fox confused?</title>
+</svelte:head>
 
 <img class="logo" src="/404.png" alt="An art of a confused red fox with a question mark next to its head" />
 <p class="font-bold">Are you sure you should be here?</p>
