@@ -1,3 +1,5 @@
+<title>Fox confused?</title>
+
 <img class="logo" src="/404.png" alt="An art of a confused red fox with a question mark next to its head" />
 <p class="font-bold">Are you sure you should be here?</p>
 <p>Because this page doesn't exist.</p>
