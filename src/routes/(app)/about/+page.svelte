@@ -17,25 +17,31 @@
         @apply rounded;
         @apply bg-stone-50;
         background-image: linear-gradient(to left, red 2px, transparent 1px), linear-gradient(to top, #ccd 1px, transparent 1px);
-        background-size: 860px 2.25rem;
-        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 200px, 760px 0);
+        background-size: 864px 2.25rem;
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 192px, 768px 0);
         padding: 5rem 120px;
         font-family: Caveat, cursive;
         &:before {
-            @apply bg-stone-100;
+            @apply top-0 right-0;
+            @apply w-48 h-48;
+            @apply absolute;
             @apply rounded;
+            @apply bg-stone-100;
             @apply shadow-xl;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
             content: '';
             background-image: linear-gradient(red 2px, transparent 1px), linear-gradient(to left, #ccd 1px, transparent 1px);
-            background-size: 2.25rem 100px;
+            background-size: 2.25rem 96px;
         }
-        & > p, h2, h3 {
+        & > p {
             @apply pb-9;
+        }
+        & > h2, & > h3 {
+            @apply pb-9;
+            @apply font-semibold;
+        }
+        & a {
+            @apply underline;
+            @apply text-blue-900;
         }
     }
     /* TODO: add animated link underline */
@@ -54,13 +60,12 @@
             I love the concept of evolution, genetic engineering and the application of it in medicine.
             I also like the topic of radioactivity, particularly radioisotopes and radiotherapy.
         </p>
-        <h3 class="font-semibold">What's up with the foxes?</h3>
+        <h3>What's up with the foxes?</h3>
         <p>
             Lisek is my surname! It means "little fox" in Polish.
-            Together with cats they are one of my favourite animals.
-            I particularly love red, marble and swift foxes!
+            Together with cats and raccoons, foxes are also my favourite animals!
         </p>
-        <h3 class="font-semibold">I'm on social media:</h3>
+        <h3>I'm on social media:</h3>
         <div class="text-2xl leading-9">
             <p>E-mail: <a href="mailto:camille@lisek.dev" target="_blank" rel="noopener noreferrer">camille@lisek.dev</p>
             <p>LinkedIn: <a href="https://linkedin.com/in/camille-lisek/" target="_blank" rel="noopener noreferrer">Camille Lisek</a></p>
@@ -69,6 +74,6 @@
             <p>Fediverse: <a href="https://kitsunes.club/@honey" target="_blank" rel="noopener noreferrer">honey@kitsunes.club</a></p>
             <p>Matrix: <a href="https://matrix.org/" target="_blank" rel="noopener noreferrer">@honey:kitsunes.club</a></p>
         </div>
-        <img class="absolute bottom-16" style="transform: scaleX(-1);" src="quill.png" alt="A quill" />
+        <img class="absolute bottom-16 pointer-events-none" style="transform: scaleX(-1);" src="quill.png" alt="A quill" />
     </div>
 </div>

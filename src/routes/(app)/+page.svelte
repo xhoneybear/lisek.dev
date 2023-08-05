@@ -19,5 +19,5 @@
     </div>
     <img class="px-16 logo" src="logo.png" alt="A pixel art of a red fox sleeping" />
     <p>Please have a look at this cute fox in the meantime :)</p>
-    <button class="px-16 py-1 text-sm font-bold bg-white rounded-xl border shadow hover:bg-blue-600 hover:border-blue-500 active:bg-blue-700 active:border-blue-600">OK</button>
+    <a href="error" class="px-16 py-1 text-sm font-bold bg-white rounded-xl border shadow hover:bg-blue-600 hover:border-blue-500 active:bg-blue-700 active:border-blue-600">OK</a>
 </div>
