@@ -5,21 +5,38 @@
 <style lang="postcss">
     :global(html, body) {
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        @apply flex flex-col;
+        @apply overflow-x-hidden;
+    }
+    nav > a:hover {
+        @apply bg-amber-500;
+    }
+    .logo {
+        width: 76px;
+        height: 64px;
+        image-rendering: pixelated;
     }
 </style>
 
-<nav class="flex sticky top-0 z-10 gap-4 items-center p-4 w-full backdrop-blur-3xl h-18 bg-white/50">
-    <img src="/logo.png" alt="A pixel art of a red fox sleeping" />
-    <p class="text-2xl font-bold">lisek.dev</p>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-</nav>
+<header class="grid sticky top-0 z-10 grid-cols-3 gap-4 justify-between items-center px-8 h-20 backdrop-blur-3xl justify-items-between bg-white/50">
+    <a class="flex gap-4 justify-self-start items-center text-6xl" href="/">
+        <img class="logo" src="/logo.png" alt="A pixel art of a red fox sleeping" />
+        <p style="font-family: 'VT323', monospace;">lisek.dev</p>
+    </a>
+    <nav class="flex justify-self-center h-full text-xl">
+        <a class="flex items-center px-8 rounded-l-xl" href="/">Home</a>
+        <a class="flex items-center px-8 rounded-r-xl" href="/about">About</a>
+    </nav>
+    <div class="flex overflow-hidden justify-self-end bg-black rounded-full cursor-pointer">
+        <div class="w-8 h-8" onclick="toggleDarkMode()" />
+        <div class="w-8 h-8" onclick="toggleDarkMode()" />
+        <div class="absolute w-8 h-8 bg-amber-500 rounded-full"></div>
+    </div>
+</header>
 
 <slot />
 
-<footer class="flex flex-col gap-2 items-center px-16 py-4 m-auto rounded-2xl backdrop-blur-3xl w-fit bg-white/50">
+<footer class="flex flex-col gap-2 items-center px-16 py-4 backdrop-blur-3xl bg-white/50">
     <p>© 2023 lisek.dev | All rights reserved.</p>
     <p>Made with ❤️ in Svelte</p>
 </footer>

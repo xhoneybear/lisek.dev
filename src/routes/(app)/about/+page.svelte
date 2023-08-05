@@ -8,10 +8,6 @@
 </script>
 
 <style lang="postcss">
-    #paper-wrap {
-        filter: drop-shadow(6px 14px 10px rgb(0 0 0 / 0.1));
-        transform: rotate(-2deg);
-    }
     .paper {
         @apply text-3xl;
         @apply rounded;
@@ -20,7 +16,7 @@
         background-size: 864px 2.25rem;
         clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 192px, 768px 0);
         padding: 5rem 120px;
-        font-family: Caveat, cursive;
+        font-family: 'Caveat', cursive;
         &:before {
             @apply top-0 right-0;
             @apply w-48 h-48;
@@ -47,7 +43,7 @@
     /* TODO: add animated link underline */
 </style>
 
-<div id="paper-wrap">
+<div class="drop-shadow-xl -rotate-2">
     <div style="width: {size_x}px; height: {size_y}px;" class="paper">
         <h1 class="pb-7 text-7xl font-semibold text-center">About me!</h1>
         <h2>Hi! I'm Camille. The very owner of this page!</h2>
@@ -74,6 +70,6 @@
             <p>Fediverse: <a href="https://kitsunes.club/@honey" target="_blank" rel="noopener noreferrer">honey@kitsunes.club</a></p>
             <p>Matrix: <a href="https://matrix.org/" target="_blank" rel="noopener noreferrer">@honey:kitsunes.club</a></p>
         </div>
-        <img class="absolute bottom-16 pointer-events-none" style="transform: scaleX(-1);" src="quill.png" alt="A quill" />
     </div>
+    <img class="absolute -right-96 bottom-96 drop-shadow-2xl pointer-events-none -scale-x-75" src="quill.png" alt="A quill" />
 </div>

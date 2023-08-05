@@ -11,7 +11,7 @@
 </style>
 
 <Layout>
-<main class="flex flex-col gap-2 justify-center items-center py-16 grow">
-    <slot />
-</main>
+    <main class="flex flex-col gap-2 justify-center items-center py-16 grow">
+        <slot />
+    </main>
 </Layout>
