@@ -15,7 +15,7 @@
         justify-content: center;
     }
     img {
-        width: 10vw;
+        width: 20vh;
         image-rendering: pixelated;
     }
 </style>
