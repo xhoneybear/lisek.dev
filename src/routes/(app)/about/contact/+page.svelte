@@ -1,5 +1,8 @@
-<script>
+<script lang="ts">
     import Feather from 'sveltekit-feather-icons/feather.svelte'
+    import { getContext } from 'svelte';
+
+    getContext<any>('tab').set(3);
 </script>
 
 <style lang="postcss">

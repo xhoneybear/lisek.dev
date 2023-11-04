@@ -1,3 +1,9 @@
+<script lang=ts>
+    import { getContext } from 'svelte';
+
+    getContext<any>('tab').set(1);
+</script>
+
 <style lang="postcss">
     p {
         margin: 0.5rem;
