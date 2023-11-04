@@ -8,6 +8,13 @@
                min-h-screen;
     }
 
+    :global(::-webkit-scrollbar) {
+        @apply w-2;
+    }
+    :global(::-webkit-scrollbar-thumb) {
+        @apply bg-gray-400/50 rounded-full;
+    }
+
     * {
         font-family: 'VT323', monospace;
     }
@@ -16,7 +23,7 @@
         image-rendering: pixelated;
     }
 
-    header {
+    nav {
         @apply fixed flex justify-between items-center
                w-[calc(100%-1rem)] h-20 m-2 z-50
                text-xl text-white;
@@ -25,7 +32,7 @@
         }
     }
 
-    nav {
+    div.menu {
         @apply flex text-3xl;
         & > a {
             @apply mx-4 overflow-clip;
@@ -87,7 +94,7 @@
         .menu-button-container {
             @apply flex;
         }
-        nav {
+        div.menu {
             @apply absolute top-0 left-0 w-full
                    flex-col justify-center items-center
                    rounded-xl overflow-clip;
@@ -106,7 +113,7 @@
             & ~ .bg {
                 @apply rounded-b-none;
             }
-            & ~ nav {
+            & ~ div.menu {
                 @apply rounded-t-none;
                 & > a {
                     @apply h-16 text-white;
@@ -117,24 +124,23 @@
     }
 </style>
 
-<header>
+<nav>
     <a href="/" class="flex gap-4 items-center text-5xl">
         <img class="logo" src="/logo.png" alt="A pixel art of a red fox sleeping" />
         <p>lisek.dev</p>
     </a>
     <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-        <div class='menu-button' />
+    <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button" />
     </label>
-    <nav>
+    <div class="menu">
         <a href="/">Home</a>
         <a href="/blog">Blog</a>
         <a href="/projects">Projects</a>
         <a href="/about">About</a>
-        <a href="/console">Console</a>
-    </nav>
+    </div>
     <div class="absolute w-full h-full bg-black bg -z-10" />
-</header>
+</nav>
 
 <slot />
 

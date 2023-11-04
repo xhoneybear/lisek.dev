@@ -3,21 +3,53 @@
 </svelte:head>
 
 <style lang="postcss">
-    .logo {
-        height: 50vh;
-        image-rendering: pixelated;
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h1 {
+            font-size: 2rem;
+        }
+        & h2 {
+            font-size: 1rem;
+        }
+        & p {
+            display: inline;
+        }
+    }
+
+    .blinker {
+        animation: blinker 1s step-end infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
     }
 </style>
 
-<div class="flex overflow-hidden flex-col gap-4 items-center pb-4 mx-auto rounded-2xl backdrop-blur-3xl w-fit bg-white/50">
-    <div class="flex gap-2 self-stretch p-2 backdrop-blur-3xl bg-white/50">
-        <div class="p-2 bg-red-500 rounded-full hover:bg-red-600 active:bg-red-700" />
-        <div class="p-2 bg-yellow-500 rounded-full hover:bg-yellow-600 active:bg-yellow-700" />
-        <div class="p-2 bg-green-500 rounded-full hover:bg-green-600 active:bg-green-700" />
-        <p class="text-xs font-bold text-center basis-full">Page under construction!</p>
-        <div class="w-16" /> <!-- Normalizer to center the title -->
-    </div>
-    <img class="px-16 logo" src="logo.png" alt="A pixel art of a red fox sleeping" />
-    <p>Please have a look at this cute fox in the meantime :)</p>
-    <a href="error" class="px-16 py-1 text-sm font-bold bg-white rounded-xl border shadow hover:bg-blue-600 hover:border-blue-500 active:bg-blue-700 active:border-blue-600">OK</a>
-</div>
+<header class="container-fluid">
+    <h1 style="font-family: monospace; margin: 1rem 0;">
+        <p _="on load
+        fetch /script/intro
+        set arr to result.split('\n')
+        repeat forever
+            repeat until temp != i
+                set temp to Math.floor(Math.random() * arr.length)
+            end
+            set i to temp
+            set line to arr[i]
+            for char in line
+                put char at the end of me
+                wait 50ms
+            end
+            wait 5s
+            repeat until me.innerHTML.length is 0
+                put me.innerHTML.slice(0, -1) into me
+                wait 30ms
+            end
+        end"></p><p class="blinker">█</p>
+    </h1>
+    <h2 style="font-family: monospace;">digital polyglot; computer virtuoso; medical fanatic</h2>
+</header>

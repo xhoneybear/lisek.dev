@@ -1,75 +1,40 @@
-<svelte:head>
-    <title>About me!</title>
-</svelte:head>
-
-<script lang="ts">
-    let size_x = 960;
-    let size_y = size_x * Math.sqrt(3);
-</script>
-
 <style lang="postcss">
-    .paper {
-        @apply text-3xl;
-        @apply rounded;
-        @apply bg-stone-50;
-        background-image: linear-gradient(to left, red 2px, transparent 1px), linear-gradient(to top, #ccd 1px, transparent 1px);
-        background-size: 864px 2.25rem;
-        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 192px, 768px 0);
-        padding: 5rem 120px;
-        font-family: 'Caveat', cursive;
-        &:before {
-            @apply top-0 right-0;
-            @apply w-48 h-48;
-            @apply absolute;
-            @apply rounded;
-            @apply bg-stone-100;
-            @apply shadow-xl;
-            content: '';
-            background-image: linear-gradient(red 2px, transparent 1px), linear-gradient(to left, #ccd 1px, transparent 1px);
-            background-size: 2.25rem 96px;
-        }
-        & > p {
-            @apply pb-9;
-        }
-        & > h2, & > h3 {
-            @apply pb-9;
-            @apply font-semibold;
-        }
-        & a {
-            @apply underline;
-            @apply text-blue-900;
-        }
+    p {
+        margin: 0.5rem;
     }
-    /* TODO: add animated link underline */
+    .logo {
+        image-rendering: pixelated;
+    }
 </style>
 
-<div class="drop-shadow-xl -rotate-2">
-    <div style="width: {size_x}px; height: {size_y}px;" class="paper">
-        <h1 class="pb-7 text-7xl font-semibold text-center">About me!</h1>
-        <h2>Hi! I'm Camille. The very owner of this page!</h2>
-        <p>
-            I'm a passionate programmer and web developer, currently studying medical informatics
-            at Wrocław University of Science and Technology and working as a DevOps engineer at Nokia.
-        </p>
-        <p>
-            Aside from programming, my second biggest passion is biochemistry and radiophysics.
-            I love the concept of evolution, genetic engineering and the application of it in medicine.
-            I also like the topic of radioactivity, particularly radioisotopes and radiotherapy.
-        </p>
-        <h3>What's up with the foxes?</h3>
-        <p>
-            Lisek is my surname! It means "little fox" in Polish.
-            Together with cats and raccoons, foxes are also my favourite animals!
-        </p>
-        <h3>I'm on social media:</h3>
-        <div class="text-2xl leading-9">
-            <p>E-mail: <a href="mailto:camille@lisek.dev" target="_blank" rel="noopener noreferrer">camille@lisek.dev</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/camille-lisek/" target="_blank" rel="noopener noreferrer">Camille Lisek</a></p>
-            <p>GitHub: <a href="https://github.com/camille-lisek" target="_blank" rel="noopener noreferrer">xhoneybear</a></p>
-            <p>Discord: <a href="https://discord.gg/yE5jgj6txW" target="_blank" rel="noopener noreferrer">xhoneybear</a></p>
-            <p>Fediverse: <a href="https://kitsunes.club/@honey" target="_blank" rel="noopener noreferrer">honey@kitsunes.club</a></p>
-            <p>Matrix: <a href="https://matrix.org/" target="_blank" rel="noopener noreferrer">@honey:kitsunes.club</a></p>
-        </div>
-    </div>
-    <img class="absolute -right-96 bottom-96 drop-shadow-2xl pointer-events-none -scale-x-75" src="quill.png" alt="A quill" />
+<img class="m-8 w-1/3 logo" src="/logo.png" alt="A pixel art of a red fox sleeping" />
+<div class="overflow-auto w-2/3">
+    <p>
+        My name is Camille.
+        I'm a young programmer based in Wrocław, Poland.
+        I'm currently studying medical informatics
+        at Wrocław University of Science and Technology.
+    </p>
+    <p>
+        I am a geek at heart and a huge medical freak.
+        I work to do both informatics and medicine at the same time.
+    </p>
+    <p>
+        I'm a cosmopolitan by heart and I love learning languages.
+        To date, I know Polish, English, Chinese and Spanish pretty well,
+        while also learning other languages like French, Czech, Dutch and Vietnamese.
+    </p>
+    <p>
+        I also love to express myself artistically. I try to draw and sing
+        in my free time and I have a dream of learning to play a guitar.
+    </p>
+    <p>
+        I play a lot of games and try to develop my own one.
+        I'm mostly keen on indie games. Currently, I'm very fixated
+        on Undertale and Deltarune. I also love games like Anuchard,
+        Hollow Knight, Minecraft, Fez and Antichamber.
+    </p>
+    <p>
+        I'm a queer and neurodivergent person!
+    </p>
 </div>
