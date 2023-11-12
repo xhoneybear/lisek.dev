@@ -49,6 +49,6 @@
     <br />
     <span>
         <Feather icon="file-text" />
-        <p>My CV is available <a href="/cv.pdf">here</a>.</p>
+        <p>My CV is available <a href="/cv/index.html">here</a>.</p>
     </span>
 </div>
