@@ -26,7 +26,7 @@
         Python web applications and tests, mostly in Bash. Less often
         I work with C code and use C++ to help myself with tooling and
         creating mocks. I am also proficient using Git and Gerrit
-        and somewhat acquainted with Jenkins.
+        and somewhat acquainted with Jenkins, Docker and Kubernetes.
     </p>
     <p>
         Just as I like to learn many spoken languages, I love to learn

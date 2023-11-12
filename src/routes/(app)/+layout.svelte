@@ -4,9 +4,8 @@
 
 <style lang="postcss">
     main {
-        background-image: url(/bg.jpg);
-        background-position: center;
-        background-size: 512px;
+        background-image: url('/bg.jpg');
+        background-size: cover;
     }
 </style>
 

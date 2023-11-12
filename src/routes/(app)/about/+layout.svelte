@@ -24,7 +24,7 @@
     }
 </style>
 
-<div class="flex overflow-hidden flex-col items-center self-center pb-4 w-[56rem] h-[34rem] rounded-2xl backdrop-blur-3xl bg-white/50">
+<div class="flex overflow-hidden flex-col items-center self-center pb-4 w-[56rem] h-[34rem] rounded-2xl backdrop-blur-3xl bg-white/50 shadow-xl">
     <div class="flex gap-2 self-stretch p-2 backdrop-blur-3xl bg-white/50">
         <div class="p-2 bg-red-500 rounded-full hover:bg-red-600 active:bg-red-700" />
         <div class="p-2 bg-yellow-500 rounded-full hover:bg-yellow-600 active:bg-yellow-700" />
@@ -37,7 +37,7 @@
         <a href="/about/experience" class:bg-white-50={ $tab === 2 }>Experience</a>
         <a href="/about/contact" class:bg-white-50={ $tab === 3 }>Contact</a>
     </nav>
-    <div class="flex self-stretch items-start p-2 h-[28rem] max-md:flex-col">
+    <div class="flex self-stretch items-start p-2 h-[28rem] max-md:flex-col max-md:items-center">
         <slot />
     </div>
 </div>

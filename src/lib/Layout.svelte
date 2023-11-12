@@ -90,7 +90,7 @@
         }
     }
 
-    @media (max-width: 840px) {
+    @media not all and (min-width: 768px) {
         .menu-button-container {
             @apply flex;
         }
