@@ -22,7 +22,6 @@
             tile.setAttribute('class', 'project');
             const bg = `https://raw.githubusercontent.com/${username}/${repo.name}/main/preview.png`;
             if (await fetch(bg).then(res => res.status === 200)) {
-                console.log(bg);
                 tile.style.backgroundImage = `url(${bg})`;
             }
             const content = document.createElement('div');
@@ -66,7 +65,7 @@
             overflow: hidden;
             text-decoration: none;
             background-color: white;
-            background-image: url('404.png');
+            background-image: url('/404.png');
             background-size: cover;
             background-position: top;
         }
