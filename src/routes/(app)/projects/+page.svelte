@@ -97,7 +97,7 @@
 
 <div class="content" id="projects">
     <div class="full">
-        <a href='/projects' class="project">
+        <a href='https://github.com/xhoneybear' class="project" style="background-image: url('/hourglass.gif');">
             <div class="project">
                 <h2>Fetching projects...</h2>
                 <p>...this might take a while.</p>
