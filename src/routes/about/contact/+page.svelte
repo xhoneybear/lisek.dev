@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
     import Feather from 'sveltekit-feather-icons/feather.svelte'
     import { getContext } from 'svelte';
 
-    getContext<any>('tab').set(3);
+    getContext('tab').set(3);
 </script>
 
 <style lang="postcss">
@@ -21,8 +21,8 @@
     }
 </style>
 
-<img class="m-8 w-1/3 logo" src="/mail.png" alt="A pixel art of a red mailbox" />
-<div class="overflow-auto w-2/3">
+<img class="m-8 max-md:h-2/3 min-[768px]:w-1/3 logo" src="/mail.png" alt="A pixel art of a red mailbox" />
+<div class="overflow-auto w-full min-[768px]:w-2/3">
     <span>
         <b>Ways you can reach me:</b>
     </span>

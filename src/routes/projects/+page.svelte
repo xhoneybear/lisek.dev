@@ -53,7 +53,6 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        height: fit-content;
     }
 
     .project {

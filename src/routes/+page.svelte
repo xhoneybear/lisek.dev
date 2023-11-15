@@ -43,6 +43,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        filter: drop-shadow(0 0 0.1rem #0f0415);
         & > h1 {
             font-size: 2rem;
             margin: 1rem 0;

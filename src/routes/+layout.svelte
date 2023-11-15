@@ -4,18 +4,32 @@
 
 <style lang="postcss">
     :global(html, body) {
-        @apply flex flex-col
+        @apply relative
+               flex flex-col
                min-h-screen;
+        background-image: url('/bg.jpg');
+        background-size: cover;
+        background-attachment: fixed;
     }
 
-    :global(::-webkit-scrollbar) {
-        @apply w-2;
+    ::-webkit-scrollbar {
+        :global(&) {
+            @apply w-2;
+        }
+        :global(html > &) {
+            background-image: linear-gradient(to bottom, #0f0415 50%, #1a0723 80%);
+        }
     }
-    :global(::-webkit-scrollbar-thumb) {
-        @apply bg-gray-400/50 rounded-full;
+    ::-webkit-scrollbar-thumb {
+        :global(&) {
+            @apply bg-stone-700/50 rounded-full;
+        }
+    }
+    :global(html > ::-webkit-scrollbar-thumb) {
+        @apply bg-slate-900 rounded-full;
     }
 
-    * {
+    nav, footer {
         font-family: 'VT323', monospace;
     }
     .logo {
@@ -142,7 +156,11 @@
     <div class="absolute w-full h-full bg-black bg -z-10" />
 </nav>
 
-<slot />
+<main class="flex flex-col gap-2 justify-center items-center p-2 grow">
+    <div class="h-20" /> <!--Navbar compensator-->
+    <slot />
+    <div class="h-24" /> <!--Footer compensator-->
+</main>
 
 <footer class="flex absolute bottom-0 w-[calc(100%-1rem)] h-24 gap-4 justify-center items-center py-4 m-2 text-white rounded-xl backdrop-blur-3xl">
     <div class="flex flex-col gap-2 items-center w-96">
@@ -154,4 +172,4 @@
             <a href="https://vercel.com"><img src="/vercel.svg" alt="Vercel logo" class="w-4" /></a>
         </p>
     </div>
-</footer>
+</footer>    

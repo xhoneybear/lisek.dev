@@ -1,7 +1,7 @@
-<script lang=ts>
+<script>
     import { getContext } from 'svelte';
 
-    getContext<any>('tab').set(2);
+    getContext('tab').set(2);
 </script>
 
 <style lang="postcss">
@@ -13,8 +13,8 @@
     }
 </style>
 
-<img class="m-8 w-1/3 logo" src="/computer.png" alt="A pixel art of an old, white computer" />
-<div class="overflow-auto w-2/3">
+<img class="m-8 max-md:h-2/3 min-[768px]:w-1/3 logo" src="/computer.png" alt="A pixel art of an old, white computer" />
+<div class="overflow-auto w-full min-[768px]:w-2/3">
     <p>
         I am currently working for Nokia as a Junior DevOps engineer.
         I work in a small team of 8 people responsible for developing

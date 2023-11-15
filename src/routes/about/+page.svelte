@@ -1,7 +1,7 @@
-<script lang=ts>
+<script>
     import { getContext } from 'svelte';
 
-    getContext<any>('tab').set(1);
+    getContext('tab').set(1);
 </script>
 
 <style lang="postcss">
@@ -13,8 +13,8 @@
     }
 </style>
 
-<img class="m-8 w-1/3 logo" src="/logo.png" alt="A pixel art of a red fox sleeping" />
-<div class="overflow-auto w-2/3">
+<img class="m-8 max-md:h-2/3 min-[768px]:w-1/3 logo" src="/logo.png" alt="A pixel art of a red fox sleeping" />
+<div class="overflow-auto w-full min-[768px]:w-2/3">
     <p>
         My name is Camille.
         I'm a young programmer based in Wrocław, Poland.
