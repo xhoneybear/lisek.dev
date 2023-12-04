@@ -10,6 +10,7 @@
         background-image: url('/bg.jpg');
         background-size: cover;
         background-attachment: fixed;
+        z-index: 0;
     }
 
     ::-webkit-scrollbar {
@@ -136,6 +137,37 @@
             }
         }
     }
+
+    .fox {
+        position: absolute;
+        height: 16rem;
+        filter: saturate(0.25)
+                brightness(0.5)
+                hue-rotate(180deg);
+    }
+
+    .float1 {
+        animation: rotate 91s infinite reverse, moveX 28s ease-in-out infinite alternate, moveY 37s ease-in-out infinite alternate-reverse;
+    }
+
+    .float2 {
+        animation: rotate 74s infinite, moveX 21s ease-in-out infinite alternate-reverse, moveY 13s ease-in-out infinite alternate;
+    }
+
+    @keyframes rotate {
+        from { rotate: 0; }
+        to { rotate: 360deg; }
+    }
+
+    @keyframes moveX {
+        from { left: 0; }
+        to { left: calc(100% - 16rem); }
+    }
+
+    @keyframes moveY {
+        from { top: 5rem; }
+        to { top: calc(100% - 22rem); }
+    }
 </style>
 
 <nav>
@@ -155,6 +187,11 @@
     </div>
     <div class="absolute w-full h-full bg-black bg -z-10" />
 </nav>
+
+<div class="overflow-hidden absolute w-full h-full -z-10">
+    <img src="/fox1.png" alt="fox astronaut" class="fox float1" />
+    <img src="/fox2.png" alt="fox astronaut" class="fox float2" />
+</div>
 
 <main class="flex flex-col gap-2 justify-center items-center p-2 grow">
     <div class="h-20" /> <!--Navbar compensator-->
