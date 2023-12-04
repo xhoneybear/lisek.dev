@@ -2,8 +2,7 @@
     <title>Fox confused?</title>
 </svelte:head>
 
-<!-- <main class="flex flex-col gap-2 justify-center items-center py-16 backdrop-blur-3xl bg-white/75 grow"> -->
-<div class="flex flex-col gap-4 justify-center items-center pb-4 mx-auto w-full h-full rounded-2xl grow">
+<div class="flex flex-col gap-4 justify-center items-center pb-4 mx-auto w-full h-full rounded-2xl backdrop-blur-3xl bg-white/50 grow">
     <img class="logo" src="/404.png" alt="An art of a confused red fox with a question mark next to its head" />
     <p class="font-bold">Are you sure you should be here?</p>
     <p>Because this page doesn't exist.</p>
