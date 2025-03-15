@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -21,7 +21,6 @@ body {
 }
 
 h1, h2, h3 {
-    padding: 1vw 0;
     text-transform: uppercase;
 }
 
@@ -37,6 +36,7 @@ h2 {
 }
 
 h3 {
+    padding: 1vw 0;
     font-size: 1.5vw;
     letter-spacing: 0.25vw;
 }
@@ -55,7 +55,7 @@ h3 {
 .main li, .main p {
     font-size: 1.75vw;
     line-height: 3vw;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 div:not(.main, .side) {
@@ -126,4 +126,16 @@ span.empty {
 
 div.br {
     padding: 0.75vw;
+}
+
+div.br_small {
+    padding: 0.25vw;
+}
+
+div.br_big {
+    padding: 1.5vw;
+}
+
+div.br_xl {
+    padding: 3vw;
 }
