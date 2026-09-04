@@ -55,7 +55,7 @@
 		width: max(var(--distance), var(--size));
 		height: max(var(--distance), var(--size));
 		border-radius: 50%;
-		background-color: #8881;
+		background-color: #2221;
 		animation: orbit var(--duration) linear infinite;
 		rotate: var(--rotation);
 		transform-style: preserve-3d;

@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
-
 @font-face {
 	font-family: 'ShareTech';
 	font-style: normal;
@@ -9,7 +8,6 @@
 	font-display: swap;
 	src: url('/fonts/ShareTech-Regular.ttf') format('truetype');
 }
-
 @font-face {
 	font-family: 'Tunic';
 	font-style: normal;
@@ -23,12 +21,11 @@ body {
 	grid-template-columns: repeat(5, minmax(0, 1fr));
 	padding: 1rem;
 	gap: 1rem;
-	background-color: #111;
+	background-color: black;
 	color: #aaa;
 	font-family: 'ShareTech', sans-serif;
 }
 
-header,
 footer,
 .panel {
 	background-color: #222;
@@ -36,11 +33,14 @@ footer,
 	padding: 1rem;
 }
 
+b {
+	color: white;
+}
+
 @media (max-width: 1280px) {
 	body {
 		grid-template-columns: 1fr;
 	}
-
 	header,
 	footer,
 	div {

@@ -43,7 +43,9 @@
 
 <style>
 	.perspective {
-		--x-ratio: 1;
+		position: fixed;
+		bottom: 10%;
+		left: 10%;
 		width: 100%;
 		height: 100%;
 		perspective: 420px;

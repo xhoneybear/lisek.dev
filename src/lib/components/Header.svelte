@@ -1,51 +1,44 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
-
-	let isDarkMode = false;
-
-	function toggleTheme() {
-		isDarkMode = !isDarkMode;
-		document.body.classList.toggle('dark-mode', isDarkMode);
-	}
-
-	onMount(() => {
-		const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-		if (prefersDarkScheme.matches) {
-			isDarkMode = true;
-			document.body.classList.add('dark-mode');
-		}
-	});
 </script>
 
+<div class="fullpad"></div>
 <header>
-	<p>lisek.dev</p>
 	<nav>
 		<a href={resolve('/')}>Home</a>
 		<a href="/about">About</a>
 		<a href="/contact">Contact</a>
 	</nav>
-	<div class="theme-slider">
-		<label for="theme-toggle">Dark Mode</label>
-		<input type="checkbox" id="theme-toggle" onchange={toggleTheme} />
-	</div>
 </header>
 
 <style>
 	header {
-		/* position: fixed;
-		top: 1rem;
-		right: 1rem;
-		width: calc(40vw - 2rem);
-		padding: 1.5rem; */
+		position: fixed;
+		width: calc(100% - 2rem);
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		grid-column: span 5;
+		justify-content: center;
+		z-index: 20;
 	}
 
-	nav a {
-		margin-left: 1rem;
-		text-decoration: none;
+	div.fullpad {
+		grid-column: span 5;
+		height: 4.5rem;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: calc(20% - 2rem);
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		background-color: #222;
+	}
+
+	@media (max-width: 1280px) {
+		nav {
+			width: 100%;
+		}
 	}
 </style>
