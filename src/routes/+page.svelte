@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import AsciiFox from '$lib/components/AsciiFox.svelte';
+	import Strays from '$lib/components/Strays.svelte';
 	import Space from '$lib/components/Space.svelte';
 </script>
 
-<div class="ascii">
-	<AsciiFox />
+<div class="logo">
+	<Strays />
 </div>
 <div class="space">
 	<Space />
@@ -125,7 +124,7 @@
 </div>
 
 <style>
-	.ascii {
+	.logo {
 		display: flex;
 		align-items: center;
 		justify-content: center;
