@@ -126,7 +126,7 @@
 <style>
 	.logo {
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: center;
 		padding: 2rem;
 		z-index: 10;
@@ -146,11 +146,6 @@
 	}
 
 	.trunic p {
-		text-align: center;
-	}
-
-	h1 {
-		font-size: 5em;
 		text-align: center;
 	}
 

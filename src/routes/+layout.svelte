@@ -24,7 +24,6 @@
 </svelte:head>
 
 <PixelGlimmer />
-<!-- <div class="crt"></div> -->
 <Header />
 {@render children()}
 <Footer />
@@ -34,27 +33,3 @@
 		<a href={resolve(localizeHref(page.url.pathname, { locale }) as Pathname)}>{locale}</a>
 	{/each}
 </div>
-
-<style>
-	.crt {
-		position: absolute;
-		top: -6px;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-size: auto 3px;
-		background-image: linear-gradient(to bottom, #8888 0px, transparent 1px);
-		pointer-events: none;
-		z-index: 20;
-		animation: crt 0.1s infinite;
-	}
-
-	@keyframes crt {
-		0% {
-			background-position: 0 0;
-		}
-		100% {
-			background-position: 0 2px;
-		}
-	}
-</style>

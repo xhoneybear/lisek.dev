@@ -6,8 +6,8 @@
 <header>
 	<nav>
 		<a href={resolve('/')}>Home</a>
-		<a href="/about">About</a>
-		<a href="/contact">Contact</a>
+		<a href={resolve("/about")}>About</a>
+		<a href={resolve("/contact")}>Contact</a>
 	</nav>
 </header>
 
