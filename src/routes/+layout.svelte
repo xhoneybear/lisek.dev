@@ -10,8 +10,8 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Space from '$lib/components/Space.svelte';
 
-	let { children } = $props();
-	let flag = $state(false);
+	let { data, children } = $props();
+	let flag = $derived(data.flag);
 </script>
 
 <svelte:head>

@@ -5,6 +5,10 @@
 	}
 
 	let { flag = $bindable(false), label }: Props = $props();
+
+	$effect(() => {
+		document.cookie = `animation=${flag}; Path=/; Max-Age=31536000; SameSite=Lax`;
+	});
 </script>
 
 <label class="switch">
