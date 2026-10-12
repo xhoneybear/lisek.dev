@@ -17,13 +17,18 @@
 }
 
 body {
-	display: grid;
-	grid-template-columns: repeat(5, minmax(0, 1fr));
 	padding: 1rem;
-	gap: 1rem;
 	background-color: black;
 	color: #aaa;
 	font-family: 'ShareTech', sans-serif;
+}
+
+main {
+	min-height: calc(100vh - 10rem);
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	padding: 1rem 0;
+	gap: 1rem;
 }
 
 footer,

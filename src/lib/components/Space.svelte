@@ -49,6 +49,7 @@
 		width: 100%;
 		height: 100%;
 		perspective: 420px;
+		z-index: -10;
 	}
 	.scene {
 		width: 100%;

@@ -8,8 +8,10 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import Space from '$lib/components/Space.svelte';
 
 	let { children } = $props();
+	let flag = $state(false);
 </script>
 
 <svelte:head>
@@ -24,8 +26,17 @@
 </svelte:head>
 
 <PixelGlimmer />
-<Header />
-{@render children()}
+
+{#if !flag}
+	<Space />
+{/if}
+
+<Header bind:flag />
+
+<main>
+	{@render children()}
+</main>
+
 <Footer />
 
 <div style="display:none">
